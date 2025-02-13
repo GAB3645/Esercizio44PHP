@@ -37,6 +37,9 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr>";
         foreach($row as $value){ 
+            if($value == null){
+                $value = "Data Sconosciuta";
+            }
             echo "<td>" . $value . "</td>";
         }
         echo "</tr>";
